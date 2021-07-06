@@ -9,11 +9,11 @@
 \setlength{\parindent}{0pt}
 
 \titleformat{\section}
-    {\large\bfseries\vspace{0.1em}}{}{0em}{}
+    {\large\bfseries}{}{0em}{}
     [\titlerule]
 
 \titlespacing{\section}
-    {0em}{0.35em}{0.35em}
+    {0em}{0.5em}{0.5em}
 
 \titleformat{\subsection}
     {\bfseries\large}{}{0em}{}
@@ -30,15 +30,13 @@
 \renewcommand{\maketitle} {
     \thispagestyle{empty}
     \begin{center}    
-        {\huge\bfseries \theauthor}
-
-        {\large shantanav@sauravmakes.tech}
-
-        \faGithub \hspace{4px} {\large shantanav} \hspace{10px} \faLinkedin \hspace{4px} {\large shantanav}
-
+        \huge\bfseries \theauthor
     \end{center}
+    \faGithub \hspace{4px} {\large shantanav} \hfill
+    \faDesktop \hspace{4px} {\large sauravmakes.tech} \hfill
+    \faEnvelope \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
+    \faLinkedin \hspace{4px} {\large shantanav}
 }
-
 
 \begin{document}
 
@@ -46,22 +44,31 @@
     \maketitle
 
     \section{Objective}
-        Passionate software engineer seeking a software developer co-op position. Available
-        May 2021 to August 2021
+        Passionate software engineer seeking a software developer co-op position. 
+        Available January 2022 to August 2022.
     \section{Education}
-        \textbf{Bachelor of Science in Software Engineering --- 
-        Rochester Institute of Technology\hfill May 2023} 
+        \textbf{Bachelor of Science in Software Engineering --- Rochester Institute of Technology\hfill May 2023} 
         
         Minor in Mathematics
 
     \section{Skills}
         \textbf{Tools:}
             Python, Java, C, C\#, PostgreSQL, React.js, Node.js, LaTeX, Git, ReSTful, Agile, Vim,
-            Web Scraping, Shell Scripting, Cloud Computing, Test Driven Development
+            Web Scraping, Shell Scripting, Cloud Computing, Test Driven Development, Docker
 
         \textbf{Languages:} \hspace{0px}
             \emph{Fluent:} English, French, Hindi \hspace{4px}
             \emph{Conversational:} American Sign Language
+
+    \section{Experience}
+        \subsection{Software Engineer --- Accessible Learning Labs \hfill June 2021 -- Present}
+            \begin{itemize}[nosep]
+                \item Developed a series of labs and workshops designed to help developers understand
+                    the importance of accessibility in web interfaces
+                \item Won awards for "Best Paper" and "Best Presentation" at ITiSCE 2021
+            \end{itemize}
+            \subsubsection{Tools}
+                PostgreSQL, React.js, Node.js, LaTeX, Git, ReSTful, Agile, Test Driven Development, Docker
 
     \section{Projects}
         \subsection{ShantOS --- Personal Project}
@@ -94,36 +101,19 @@
             \subsubsection{Tools}
                 Java, ReSTful, Git, Agile, Test Driven Development
 
-        \subsection{Radio Lyric Checker --- Personal Project}
-            \begin{itemize}[nosep]
-                \item Developed a python program that iterates over songs in a Spotify playlist and uses the Genius 
-                    Lyrics API to check for curse words in the lyrics to determine the song's eligibility for radio 
-                    airplay 
-                \item Removed numerous songs containing explicit language from audio logs before they were broadcast
-            \end{itemize}
-            \subsubsection{Tools}
-                Python, ReSTful APIs
-
     \section{Leadership}
-        \subsection{Teaching Assistant --- Rochester Institute of Technology \hfill January 2021 -- Present}
+        \subsection{Teaching Assistant --- Rochester Institute of Technology \hfill January 2021 -- May 2021}
             \begin{itemize}[nosep]
                 \item Adapted classroom environments to COVID-19 challenges by facilitating in-person
                     instruction for entirely remote professors and presented supplemental material to 
                     students by running lectures outside of class time
-                \item Graded over 700 student assignments
+                \item Graded over 1200 student assignments
             \end{itemize}
 
-        \subsection{Program Director --- WITR 89.7FM \hfill April 2021 -- Present}
+        \subsection{Head of Technology --- Society of Software Engineers \hfill August 2020 -- May 2021}
             \begin{itemize}[nosep]
-                \item Implemented an extensive station-wide format refresh with new review processes for music ingest
-                \item Created structured automatic programming clocks to ensure quality broadcasts at all 
-                    hours of the day
-            \end{itemize}
-
-        \subsection{Head of Technology --- Society of Software Engineers \hfill August 2020 -- Present}
-            \begin{itemize}[nosep]
-                \item Built and maintained the organization's tech stack and repositories, while playing an active 
-                    role in the \newline leadership of the organization 
+                \item Built and maintained the organization's tech stack and repositories, and played and active 
+                    role in the leadership of the organization
                 \item Spearheaded the complete replacement and modernization of the organization's entire tech 
                     stack
             \end{itemize}

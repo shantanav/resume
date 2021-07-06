@@ -27,3 +27,4 @@
 *.bak
 *.pdf
 *.class
+__*
