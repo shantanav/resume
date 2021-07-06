@@ -5,6 +5,7 @@
     \usepackage[margin=0.5in]{geometry}
     \usepackage{fontawesome5}
     \usepackage[misc]{ifsym}
+    \usepackage{pgffor}
 
 \setlength{\parindent}{0pt}
 
@@ -38,6 +39,35 @@
     \faLinkedin \hspace{4px} {\large shantanav}
 }
 
+\newcommand{\experienceitem}[6]{
+    \subsection{#1 --- #2 \hfill #3 -- #4}
+        \begin{itemize}[nosep]
+            \foreach\x in #5 {
+                \item \x
+            }
+        \end{itemize}
+        \subsubsection{Tools} #6
+}
+
+\newcommand{\projectitem}[4]{
+    \subsection{#1 --- #2}
+        \begin{itemize}[nosep]
+            \foreach\x in #3 {
+                \item \x
+            }
+        \end{itemize}
+        \subsubsection{Tools} #4
+}
+
+\newcommand{\leadershipitem}[5]{
+    \subsection{#1 --- #2 \hfill #3 -- #4}
+        \begin{itemize}[nosep]
+            \foreach\x in #5 {
+                \item \x
+            }
+        \end{itemize}
+}
+
 \begin{document}
 
     \author{Shantanav Saurav}
@@ -61,61 +91,66 @@
             \emph{Conversational:} American Sign Language
 
     \section{Experience}
-        \subsection{Software Engineer --- Accessible Learning Labs \hfill June 2021 -- Present}
-            \begin{itemize}[nosep]
-                \item Developed a series of labs and workshops designed to help developers understand
-                    the importance of accessibility in web interfaces
-                \item Cleaned up the project's deployment by containerizing using Docker
-            \end{itemize}
-            \subsubsection{Tools}
-                PostgreSQL, React.js, Node.js, LaTeX, Git, ReSTful, Agile, Test Driven Development, Docker
+        \experienceitem
+            {Software Engineer} {Accessible Learning Labs}
+            {June 2021} {Present}
+            {{
+                {Developed a series of labs and workshops designed to help developers understand the importance 
+                    of accessibility in web interfaces},
+                {Cleaned up the project's deployment by containerizing using Docker}
+            }}
+            {PostgreSQL, React.js, Node.js, LaTeX, Git, ReSTful, Agile, Test Driven Development, Docker}
 
     \section{Projects}
-        \subsection{ShantOS --- Personal Project}
-            \begin{itemize}[nosep]
-                \item Created a 32-bit operating system capable of booting on x86 architecture from GRUB 
-                \item Wrote drivers to write data to a framebuffer mapped to memory I/O ports for 
-                    on-screen output and write text to the operating environment's virtual serial 
-                    port for logging output 
-            \end{itemize}
-            \subsubsection{Tools}
-                C, Assembly, Shell Scripting
+        \projectitem
+            {ShantOS} {Personal Project}
+            {{
+                {Created a 32-bit operating system capable of booting on x86 architecture from GRUB},
+                {Wrote drivers to write data to a framebuffer mapped to memory I/O ports for on-screen output and 
+                    write text to the operating environment's virtual serial port for logging output}
+            }}
+            {C, Assembly, Shell Scripting}
 
-        \subsection{Tech Talks --- Lecture Series}
-            \begin{itemize}[nosep]
-                \item Developed and presented a series of informative talks on various topics in technology, 
-                    software development, and personal software process on a weekly basis
-                \item Wrote practice exercises and games for attendees to interact with the subject matter
-            \end{itemize}
-            \subsubsection{Tools}
-                Vim, Shell Scripting, LaTeX, Cloud Computing with Azure
+        \projectitem
+            {Tech Talks} {Lecture Series}
+            {{
+                {Developed and presented a series of informative talks on various topics in technology, 
+                    software development, and personal software process on a weekly basis},
+                {Wrote practice exercises and games for attendees to interact with the subject matter}
+            }}
+            {Vim, Shell Scripting, LaTeX, Cloud Computing with Azure}
 
-        \subsection{Web Checkers --- Team Project}
-            \begin{itemize}[nosep]
-                \item Designed, built, and tested a browser-based online competitive checkers game for multiple 
-                    players
-                \item Worked with a team to implement an agile workflow and design and develop the product 
-                    over three releases
-                \item Achieved 98\% code coverage with unit testing
-            \end{itemize}
-            \subsubsection{Tools}
-                Java, ReSTful, Git, Agile, Test Driven Development
+        \projectitem
+            {Web Checkers} {Team Project}
+            {{
+                {Designed, built, and tested a browser-based online competitive checkers game for multiple 
+                    players},
+                {Worked with a team to implement an agile workflow and design and develop the product 
+                    over three releases},
+                {Achieved 98\% code coverage with unit testing}
+            }}
+            {Java, ReSTful, Git, Agile, Test Driven Development}
 
     \section{Leadership}
-        \subsection{Teaching Assistant --- Rochester Institute of Technology \hfill January 2021 -- May 2021}
-            \begin{itemize}[nosep]
-                \item Adapted classroom environments to COVID-19 challenges by facilitating in-person
-                    instruction for entirely remote professors and presented supplemental material to 
-                    students by running lectures outside of class time
-                \item Graded over 1200 student assignments
-            \end{itemize}
+        \leadershipitem
+            {Teaching Assistant} {Rochester Institute of Technology}
+            {January 2021} {May 2021}
+            {{
+                {Adapted classroom environments to COVID-19 challenges by facilitating in-person instruction 
+                    for entirely remote professors}, 
+                {Presented additional material to help students by running lectures and activities outside of 
+                    class time},
+                {Graded over 1200 student assignments}
+            }}
 
-        \subsection{Head of Technology --- Society of Software Engineers \hfill August 2020 -- May 2021}
-            \begin{itemize}[nosep]
-                \item Built and maintained the organization's tech stack and repositories, and played and active 
-                    role in the leadership of the organization
-                \item Spearheaded the complete replacement and modernization of the organization's entire tech 
-                    stack
-            \end{itemize}
+        \leadershipitem
+            {Head of Technology} {Society of Software Engineers}
+            {August 2020} {May 2021}
+            {{
+                {Built and maintained the organization's tech stack and repositories, and played and active 
+                    role in the leadership of the organization}, 
+                {Spearheaded the complete replacement and modernization of the organization's entire tech 
+                    stack}
+            }}
 
 \end{document}
