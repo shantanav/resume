@@ -7,6 +7,7 @@
     \usepackage[misc]{ifsym}
     \usepackage{pgffor}
     \usepackage{etoolbox}
+    \usepackage{lmodern}
 
 \setlength{\parindent}{0pt}
 
@@ -15,7 +16,7 @@
     [\titlerule]
 
 \titlespacing{\section}
-    {0em}{0.75em}{0.5em}
+    {0em}{0.5em}{0.5em}
 
 \titleformat{\subsection}
     {\bfseries\large}{}{0em}{}
@@ -27,7 +28,7 @@
     {\bfseries}{}{0em}{}[:]
 
 \titlespacing{\subsubsection}
-    {0em}{0.25em}{0.5em}
+    {0em}{0.25em}{0.25em}
 
 \renewcommand{\maketitle} {
     \thispagestyle{empty}
@@ -63,8 +64,7 @@
     \maketitle
 
     \section{Objective}
-        Passionate software engineer seeking a software developer co-op position. 
-        Available January 2022 to August 2022.
+        Passionate software engineer seeking a full time software developer position. 
     \section{Education}
         \textbf{Bachelor of Science in Software Engineering --- Rochester Institute of Technology\hfill May 2023} 
         
@@ -72,23 +72,40 @@
 
     \section{Skills}
         \textbf{Tools:}
-            Python, Java, C\#, C, Assembly Postgres, React.js, Express.js, LaTeX, Git, RESTful, Agile, Vim,
-            Shell Scripting, Web Scraping, AWS, Google Cloud Platform, Test Driven Development, Docker, Docker-Compose
+            Python, Java, C\#, C, x86 Assembly, Postgres, JavaScript, REST APIs, Agile, Command-Line Scripting, AWS, 
+                Test Driven Development, Docker, Kubernetes, Prometheus, Loki, Grafana, Regex
 
-        \textbf{Languages:} \hspace{0px}
-            \emph{Fluent:} English, French, Hindi \hspace{4px}
-            \emph{Conversational:} American Sign Language
+        \textbf{Languages:}
+            \emph{Fluent:} English, French, Hindi, \emph{Conversational:} American Sign Language
 
     \section{Experience}
-        \resumeitem {Software Engineer} {Accessible Learning Labs} {June 2021 -- Present}
+        \resumeitem {Software Engineer} {Oro Labs} {December 2021 -- August 2022}
             {{
-                {Developed and presented a series of labs and workshops designed to demonstrate the importance of 
-                    designing web interfaces with accessibility in mind},
-                {Rewrote the project's deployment to use containerization with Docker and Docker-Compose}
+                {Using Prometheus, Loki, and Grafana, designed and built a full suite for monitoring and alerting
+                    on errors regarding Kubernetes deployments},
+                {Designed and extensively tested regex parsing for log lines to detect various runtime errors},
+                {Discovered numerous previously untraceable bugs and errors, dropping mean time to recovery by 99\%}
             }}
-            {PostgreSQL, React.js, Express.js, Git, RESTful, Agile, Test Driven Development, Docker}
+            {Java, JavaScript (React), Prometheus, Loki, Grafana, Test Driven Development, AWS, Regex}
+         
+        \resumeitem {Software Engineer} {Accessible Learning Labs} {June 2021 -- August 2022}
+            {{
+                {Developed a series of labs and workshops designed to demonstrate the importance of 
+                    designing web interfaces with accessibility in mind},
+                {Rewrote the project's deployment to use containerization with Docker and Docker-Compose},
+                {Presented the project and its results at multinational academic conferences}
+            }}
+            {PostgreSQL, JavaScript (React, Express), Git, RESTful, Agile, Test Driven Development, Docker}
+        
+        \resumeitem {Software Engineer} {IDEATE Labs} {June 2021 -- August 2021}
+            {{
+                {Developed proof-of-concept scripts to validate non-software oriented teams' ideas},
+                {Presented software solutions and proposed approaches to stakeholders},
+                {Documented methods, proposed design, and architecture for future takeover by a full software team}
+            }}
+            {Python, RESTful APIs, Git}
 
-        \resumeitem {Teaching Assistant} {Rochester Institute of Technology} {January -- May 2021}
+        \resumeitem {Teaching Assistant} {Rochester Institute of Technology} {January 2021 -- May 2021}
             {{
                 {Adapted classroom environments to COVID-19 challenges by facilitating in-person instruction 
                     for professors teaching remotely}, 
@@ -96,7 +113,7 @@
                     class time},
                 {Graded over 1200 student assignments}
             }}
-            {Python, C, PostgreSQL, React.js, Express.js, RESTful, Git, Shell Scripting, Test Driven Development}
+            {Python, C, PostgreSQL, JavaScript (React, Express), RESTful, Shell Scripting, Test Driven Development}
 
     \section{Projects}
         \resumeitem {ShantOS} {Personal Project} {} 
@@ -105,7 +122,7 @@
                 {Wrote drivers to write data to a framebuffer mapped to I/O ports for on-screen output, and to write 
                     text to the virtual operating environment's serial buffer for logging output}
             }}
-            {C, Assembly, Shell Scripting, Docker}
+            {C, x86 Assembly, Shell Scripting, Docker}
 
         \resumeitem {Remote Queue} {Personal Project} {}
             {{
@@ -114,24 +131,6 @@
                 {Implemented Windows Communications Forms to facilitate client-server communication and data interchange
                     with Service and Operation contracts}
             }}
-            {C\#, Git, Test Driven Development}
-
-    \section{Leadership}
-
-        \resumeitem {Tech Talks} {Lecture Series} {January -- May 2021}
-            {{
-                {Developed and presented a series of informative talks on various topics in software development and 
-                    personal software process on a weekly basis},
-                {Wrote practice exercises and games for attendees to interact with the subject matter}
-            }}
-            {}
-
-        \resumeitem {Head of Technology} {Society of Software Engineers} {August 2020 -- July 2021}
-            {{
-                {Built and maintained the organization's tech stack and repositories, and played and active 
-                    role in the leadership of the organization}, 
-                {Spearheaded the modernization of the organization's entire tech stack}
-            }}
-            {}
+            {C\#, Test Driven Development}
 
 \end{document}
