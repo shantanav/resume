@@ -35,10 +35,14 @@
     \begin{center}    
         \huge\bfseries \theauthor
     \end{center}
-    \faGithub      \hspace{4px} {\large shantanav} \hfill
-    \faDesktop     \hspace{4px} {\large sauravmakes.tech} \hfill
-    \faEnvelope    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
-    \faLinkedin    \hspace{4px} {\large shantanav}
+    \hspace{4px} {\large shantanav} \hfill
+    \hspace{4px} {\large sauravmakes.tech} \hfill
+    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
+    \hspace{4px} {\large shantanav}
+    % \faGithub      \hspace{4px} {\large shantanav} \hfill
+    % \faDesktop     \hspace{4px} {\large sauravmakes.tech} \hfill
+    % \faEnvelope    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
+    % \faLinkedin    \hspace{4px} {\large shantanav}
 }
 
 % Defines a single resume item.
@@ -48,14 +52,11 @@
 %         #3 => Time Period OPTIONALLY EMPTY
 %         #4 => Description items (CDL of strings)
 %         #5 => List of tools used OPTIONALLY EMPTY
-\newcommand{\resumeitem}[5]{
+\newcommand{\resumeitem}[4]{
     \subsection{#1 --- #2 \ifstrempty{#3}{} {\hfill #3}}
         \begin{itemize}[nosep]
             \foreach\x in #4 { \item \x }
         \end{itemize}
-        \ifstrempty{#5}{}{
-            \subsubsection{Tools} #5
-        }
 }
 
 \begin{document}
@@ -63,17 +64,20 @@
     \author{Shantanav Saurav}
     \maketitle
 
-    \section{Objective}
-        Passionate software engineer seeking a full time software developer position. 
     \section{Education}
-        \textbf{Bachelor of Science in Software Engineering --- Rochester Institute of Technology\hfill May 2023} 
+        \textbf{Rochester Institute of Technology} 
+        
+        Bachelor of Science in Software Engineering, Expected August 2023 
         
         Minor in Mathematics
 
     \section{Skills}
+        \textbf{Programming Languages:}
+            Python, Java, C\#, C, x86 Assembly, SQL, JavaScript, Bash
+
         \textbf{Tools:}
-            Python, Java, C\#, C, x86 Assembly, Postgres, JavaScript, REST APIs, Agile, Command-Line Scripting, AWS, 
-                Test Driven Development, Docker, Kubernetes, Prometheus, Loki, Grafana, Regex
+            REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker, 
+                Prometheus, Loki, Grafana, Regex
 
         \textbf{Languages:}
             \emph{Fluent:} English, French, Hindi, \emph{Conversational:} American Sign Language
@@ -82,36 +86,30 @@
         \resumeitem {Software Engineer} {Oro Labs} {December 2021 -- August 2022}
             {{
                 {Designed and built a full suite of tools for monitoring Kubernetes deployments and alerting on errors},
-                {Designed and extensively tested regex parsing for log lines to detect various Java runtime errors},
+                {Wrote and extensively tested regex parsing for log lines to detect various Java runtime errors},
                 {Discovered numerous previously untraceable bugs and errors, dropping mean time to recovery by 99\%}
             }}
-            {Java, Python, JavaScript (React), Prometheus, Loki, Grafana, Test Driven Development, AWS, Regex}
          
         \resumeitem {Software Engineer} {Accessible Learning Labs} {June 2021 -- August 2022}
             {{
                 {Developed a series of labs and workshops designed to demonstrate the importance of 
-                    designing web interfaces with accessibility in mind},
-                {Presented the project and its results at multinational academic conferences}
+                    designing web interfaces with accessibility for disability in mind, hosted at all.rit.edu},
+                {Presented the project and its results at conferences for computer science education such as ITiSCE}
             }}
-            {PostgreSQL, JavaScript (React, Express), Git, RESTful, Agile, Test Driven Development, Docker}
         
         \resumeitem {Software Engineer} {ICOGZ - IDEATE Labs} {June 2021 -- August 2021}
             {{
-                {Developed proof-of-concept scripts to validate non-software oriented teams' ideas},
+                {Developed proof-of-concept scripts to validate marketing teams' feature ideas},
                 {Documented methods, proposed design, and architecture for future takeover by a full software team},
                 {Presented software solutions and proposed approaches to stakeholders}
             }}
-            {Python, RESTful APIs, Git}
 
-        \resumeitem {Teaching Assistant} {Rochester Institute of Technology} {January 2021 -- May 2021}
+        \resumeitem {Course Assistant} {Rochester Institute of Technology} {January 2021 -- May 2021}
             {{
                 {Adapted classroom environments to COVID-19 challenges by facilitating in-person instruction 
                     for professors teaching remotely}, 
-                {Presented additional material to help students by running lectures and activities outside of 
-                    class time},
-                {Graded over 1200 student assignments}
+                {Taught additional material to help students by running lectures and activities outside of class time}
             }}
-            {Python, C, PostgreSQL, JavaScript (React, Express), RESTful, Shell Scripting, Test Driven Development}
 
     \section{Projects}
         \resumeitem {ShantOS} {Personal Project} {} 
@@ -120,7 +118,6 @@
                 {Wrote drivers to write data to a framebuffer mapped to I/O ports for on-screen output, and to write 
                     text to the virtual operating environment's serial buffer for logging output}
             }}
-            {C, x86 Assembly, Shell Scripting, Docker}
 
         \resumeitem {Remote Queue} {Personal Project} {}
             {{
@@ -129,6 +126,5 @@
                 {Implemented Windows Communications Forms to facilitate client-server communication and data interchange
                     with Service and Operation contracts}
             }}
-            {C\#, Test Driven Development}
 
 \end{document}
