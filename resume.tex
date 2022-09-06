@@ -14,7 +14,6 @@
 \titleformat{\section}
     {\large\bfseries}{}{0em}{}
     [\titlerule]
-
 \titlespacing{\section}
     {0em}{0.5em}{0.5em}
 
@@ -24,25 +23,17 @@
 \titlespacing{\subsection}
     {0em}{0.5em}{0em}
 
-\titleformat{\subsubsection}[runin]
-    {\bfseries}{}{0em}{}[:]
-
-\titlespacing{\subsubsection}
-    {0em}{0.25em}{0.25em}
+\renewcommand{\familydefault}{\sfdefault}
 
 \renewcommand{\maketitle} {
     \thispagestyle{empty}
     \begin{center}    
         \huge\bfseries \theauthor
     \end{center}
-    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
-    \hspace{4px} {\large sauravmakes.tech} \hfill
-    \hspace{4px} {\large shantanav} \hfill
-    \hspace{4px} {\large shantanav}
-    % \faEnvelope    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
-    % \faDesktop     \hspace{4px} {\large sauravmakes.tech} \hfill
-    % \faGithub      \hspace{4px} {\large shantanav} \hfill
-    % \faLinkedin    \hspace{4px} {\large shantanav}
+    \faEnvelope    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
+    \faDesktop     \hspace{4px} {\large sauravmakes.tech} \hfill
+    \faGithub      \hspace{4px} {\large shantanav} \hfill
+    \faLinkedin    \hspace{4px} {\large shantanav}
 }
 
 % Defines a single resume item.
@@ -75,7 +66,7 @@
             Python, Java, C\#, C, x86 Assembly, SQL, JavaScript, Bash
 
         \textbf{Tools:}
-            REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker, 
+            REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker Compose, 
                 Prometheus, Loki, Grafana, Regex
 
         \textbf{Languages:}
@@ -89,25 +80,27 @@
                 {Wrote and extensively tested regex parsing for log lines to detect various Java runtime errors},
                 {Discovered numerous previously untraceable bugs, faults, and runtime errors, dropping mean time to discovery by 
                     80\%, and mean time to recovery by 99\%},
-                {Used external APIs to build bank account validation systems to detect fraudulent bank accounts using sanction 
-                    lists, and data on known fraudulent transactions and accounts}
+                {Integrated external APIs to build bank account validation systems to detect fraudulent bank accounts using 
+                    sanction lists, and public data on known fraudulent transactions and accounts}
             }}
          
         \resumeitem {Software Engineer} {Accessible Learning Labs} {June 2021 -- August 2022}
             {{
                 {Developed a series of labs and workshops designed to demonstrate the importance of 
                     designing web interfaces with accessibility for disability in mind, hosted at all.rit.edu},
-                {Presented the project and its results at conferences for computer science education such as ITiSCE, CCSCNE}
+                {Redesigned the webapp's entire deployment using Docker Compose, nearly eliminating sources of failure},
+                {Presented the project and its results at conferences for computing education such as ITiSCE and CCSCNE}
             }}
         
-        \resumeitem {Software Engineer} {ICOGZ - IDEATE Labs} {June 2021 -- August 2021}
+        \resumeitem {Software Engineer} {ICOGZ - IDEATE Labs} {May 2021 -- August 2021}
             {{
                 {Acted as a consultant to a marketing firm, documenting and performing preliminary testing on requirements 
-                    for the eventual development of a module of their enterprise app by a software contractor},
-                {Developed proof-of-concept scripts using external APIs, and both private and public datasets to 
-                    validate marketing teams' feature ideas, and turn them into technical requirements},
-                {Documented methods, proposed design, and architecture for future takeover by a full software team},
-                {Presented software solutions and proposed approaches to stakeholders}
+                    for the eventual development of a social media trends module of their enterprise app by a software 
+                        contractor},
+                {Rapidly prototyped proof-of-concept scripts using external APIs, and both private and public datasets to 
+                    validate the feasibility of marketing teams' feature ideas, and turn them into technical requirements},
+                {Presented software solutions and proposed approaches to stakeholders, and documented methods, proposed designs,
+                    and architectures for future takeover by a full software team}
             }}
 
         \resumeitem {Course Assistant} {Rochester Institute of Technology} {January 2021 -- May 2021}
@@ -128,10 +121,11 @@
 
         \resumeitem {Remote Queue} {Personal Project} {}
             {{
-                {Designed a TCP-networked application capable of remote method invocation to manipulate a simple queue 
+                {Designed a TCP-networked application in C# capable of remote method invocation to manipulate a simple queue 
                     from a remote client},
                 {Implemented Windows Communications Forms to facilitate client-server communication and data interchange
-                    with Service and Operation contracts}
+                    with Service and Operation contracts, using the \emph{Proxy} design pattern}
             }}
 
 \end{document}
+
