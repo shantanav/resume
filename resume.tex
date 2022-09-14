@@ -1,4 +1,4 @@
-\documentclass[11pt, letterpaper]{article}
+\documentclass[10.5pt, letterpaper]{article}
     \usepackage{titlesec}
     \usepackage{titling}
     \usepackage{enumitem}
@@ -23,17 +23,19 @@
 \titlespacing{\subsection}
     {0em}{0.5em}{0em}
 
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 
 \renewcommand{\maketitle} {
     \thispagestyle{empty}
     \begin{center}    
-        \huge\bfseries \theauthor
+        \huge{\bfseries{\theauthor}}
     \end{center}
-    \faEnvelope    \hspace{4px} {\large shantanav@sauravmakes.tech} \hfill
-    \faDesktop     \hspace{4px} {\large sauravmakes.tech} \hfill
-    \faGithub      \hspace{4px} {\large shantanav} \hfill
-    \faLinkedin    \hspace{4px} {\large shantanav}
+
+    \faMobile      \hspace{2px} {\large (914) 792-9814} \hfill
+    \faDesktop     \hspace{2px} {\large sauravmakes.tech} \hfill
+    \faGithub      \hspace{2px} {\large shantanav} \hfill
+    \faEnvelope    \hspace{2px} {\large shantanav@sauravmakes.tech} \hfill
+    \faLinkedin    \hspace{2px} {\large shantanav}
 }
 
 % Defines a single resume item.
@@ -45,7 +47,7 @@
 \newcommand{\resumeitem}[4]{
     \subsection{#1 --- #2 \ifstrempty{#3}{} {\hfill #3}}
         \begin{itemize}[nosep]
-            \foreach\x in #4 { \item \x }
+            \foreach\x in #4 { \ifstrempty{\x}{}{\item \x}}
         \end{itemize}
 }
 
@@ -55,15 +57,12 @@
     \maketitle
 
     \section{Education}
-        \textbf{Rochester Institute of Technology} 
-        
-        Bachelor of Science in Software Engineering, Expected August 2023 
-        
+        \textbf{Rochester Institute of Technology --- Bachelor of Science in Software Engineering \hfill Expected August 2023}
         Minor in Mathematics
 
     \section{Skills}
         \textbf{Programming Languages:}
-            Python, Java, C\#, C, x86 Assembly, SQL, JavaScript, Bash
+            Python, C, JavaScript, SQL, Java, C\#, x86 Assembly, Bash
 
         \textbf{Tools:}
             REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker Compose, 
@@ -103,14 +102,6 @@
                     and architectures for future takeover by a full software team}
             }}
 
-        \resumeitem {Course Assistant} {Rochester Institute of Technology} {January 2021 -- May 2021}
-            {{
-                {Adapted classroom environments to COVID-19 challenges by facilitating in-person instruction 
-                    for professors teaching remotely}, 
-                {Taught additional material to help students by running lectures and activities outside of class time},
-                {Prepared lectures, taught classes, and coordinated in-class activities in the professor's absence}
-            }}
-
     \section{Projects}
         \resumeitem {ShantOS} {Personal Project} {} 
             {{
@@ -121,10 +112,26 @@
 
         \resumeitem {Remote Queue} {Personal Project} {}
             {{
-                {Designed a TCP-networked application in C# capable of remote method invocation to manipulate a simple queue 
+                {Designed a TCP-networked application in C\# capable of remote method invocation to manipulate a simple queue 
                     from a remote client},
                 {Implemented Windows Communications Forms to facilitate client-server communication and data interchange
                     with Service and Operation contracts, using the \emph{Proxy} design pattern}
+            }}
+
+    \section{Leadership}
+        \resumeitem {President} {RIT Society of Software Engineers} {May 2022 --- Present} 
+            {{
+                {Responsible for overseeing the progress of the organization, providing a space for mentoring, networking
+                    opportunities, social events, and technical projects},
+                {Interface and work with RIT administration, and industry professionals to further the objectives of the 
+                    society}
+            }}
+        \resumeitem {Program Director} {WITR 89.7 FM} {March 2021 - August 2022} 
+            {{
+                {Implemented an extensive station-wide format refresh, renewing the sound of the station and tailoring it 
+                    to a new target demographic, increasing average active listeners by 400\%},
+                {Improved processes for music ingest, reducing time from music arrival to scheduling from 21 days to 4 days},
+                {Created structured automatic programming clocks to ensure quality broadcasts}
             }}
 
 \end{document}
