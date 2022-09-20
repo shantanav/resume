@@ -1,11 +1,11 @@
-\documentclass[10.5pt, letterpaper]{article}
+\documentclass[10pt, letterpaper]{article}
     \usepackage{titlesec}
     \usepackage{titling}
     \usepackage{enumitem}
     \usepackage[margin=0.5in]{geometry}
     \usepackage{fontawesome5}
     \usepackage[misc]{ifsym}
-    \usepackage{pgffor}
+    \usepackage{pgffor} 
     \usepackage{etoolbox}
     \usepackage{lmodern}
 
@@ -14,6 +14,7 @@
 \titleformat{\section}
     {\large\bfseries}{}{0em}{}
     [\titlerule]
+
 \titlespacing{\section}
     {0em}{0.5em}{0.5em}
 
@@ -21,9 +22,9 @@
     {\bfseries\large}{}{0em}{}
 
 \titlespacing{\subsection}
-    {0em}{0.5em}{0em}
+    {0em}{0.25em}{0em}
 
-%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{\sfdefault}
 
 \renewcommand{\maketitle} {
     \thispagestyle{empty}
@@ -31,10 +32,14 @@
         \huge{\bfseries{\theauthor}}
     \end{center}
 
-    \faMobile      \hspace{2px} {\large (914) 792-9814} \hfill
-    \faDesktop     \hspace{2px} {\large sauravmakes.tech} \hfill
+    \begin{center}
+        \faMobile      \hspace{2px} {\large (914) 792-9814} 
+        \hspace{4px}
+        \faEnvelope    \hspace{2px} {\large shantanav@sauravmakes.tech}
+    \end{center}
+
+    \faGlobe       \hspace{2px} {\large sauravmakes.tech} \hfill
     \faGithub      \hspace{2px} {\large shantanav} \hfill
-    \faEnvelope    \hspace{2px} {\large shantanav@sauravmakes.tech} \hfill
     \faLinkedin    \hspace{2px} {\large shantanav}
 }
 
@@ -43,7 +48,7 @@
 %         #1 => Job Title 
 %         #2 => Company
 %         #3 => Time Period OPTIONALLY EMPTY
-%         #4 => Description items (CDL of strings)
+%         #4 => Description items (CDL of strings) OPTIONALLY EMPTY
 \newcommand{\resumeitem}[4]{
     \subsection{#1 --- #2 \ifstrempty{#3}{} {\hfill #3}}
         \begin{itemize}[nosep]
@@ -58,18 +63,15 @@
 
     \section{Education}
         \textbf{Rochester Institute of Technology --- Bachelor of Science in Software Engineering \hfill Expected August 2023}
+        
         Minor in Mathematics
 
     \section{Skills}
-        \textbf{Programming Languages:}
-            Python, C, JavaScript, SQL, Java, C\#, x86 Assembly, Bash
+        \textbf{Programming Languages:} Python, C, JavaScript, SQL, Java, C\#, x86 Assembly, Bash, 
+        \textbf{Tools:} REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker Compose, 
+                Prometheus, Loki, Grafana, Regex,
 
-        \textbf{Tools:}
-            REST APIs, Agile, Linux System Administration, Postgres, AWS, Test Driven Development, Docker Compose, 
-                Prometheus, Loki, Grafana, Regex
-
-        \textbf{Languages:}
-            \emph{Fluent:} English, French, Hindi, \emph{Conversational:} American Sign Language
+        \textbf{Languages:} \emph{Fluent:} English, French, Hindi, \emph{Conversational:} American Sign Language
 
     \section{Experience}
         \resumeitem {Software Engineer} {Oro Labs} {December 2021 -- August 2022}
@@ -103,15 +105,13 @@
             }}
 
     \section{Projects}
-        \resumeitem {ShantOS} {Personal Project} {} 
-            {{
+        \resumeitem {ShantOS} {Personal Project} {} {{
                 {Created a 32-bit operating system capable of booting on x86 architecture from GRUB},
                 {Wrote drivers to write data to a framebuffer mapped to I/O ports for on-screen output, and to write 
                     text to the virtual operating environment's serial buffer for logging output}
             }}
 
-        \resumeitem {Remote Queue} {Personal Project} {}
-            {{
+        \resumeitem {Remote Queue} {Personal Project} {} {{
                 {Designed a TCP-networked application in C\# capable of remote method invocation to manipulate a simple queue 
                     from a remote client},
                 {Implemented Windows Communications Forms to facilitate client-server communication and data interchange

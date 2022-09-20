@@ -1,4 +1,4 @@
-name: Compile Latex and Release PDF  
+name: Compile Latex and Release PDF to GitHub and personal site
 
 
 on:
@@ -38,3 +38,20 @@ jobs:
           asset_path: ./resume.pdf
           asset_name: resume.pdf
           asset_content_type: pdf
+
+  release_to_site:
+    needs: build_latex
+    runs-on: ubuntu-latest
+    steps:
+    - name: Put resume on my personal site
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_SECRET }}
+        script: |
+          cd ~/website/res/
+          mv resume.pdf resume_bak.pdf
+          wget https://github.com/shantanav/resume/releases/download/latest/resume.pdf
+          rm resume_bak.pdf
+  
