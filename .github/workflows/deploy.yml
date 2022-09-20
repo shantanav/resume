@@ -52,7 +52,7 @@ jobs:
         script: |
           cd ~/website/res/
           mv resume.pdf resume_bak.pdf
-          wget https://github.com/shantanav/resume/releases/download/latest/resume.pdf
+          wget https://github.com/shantanav/resume/releases/download/${{ github.ref }}/resume.pdf
           rm resume_bak.pdf
           docker compose up --build -d
   
